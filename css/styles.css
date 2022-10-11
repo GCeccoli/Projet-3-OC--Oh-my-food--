@@ -1,0 +1,16 @@
+/*General*/
+
+*{
+    box-sizing: border-box;
+}
+
+h1 h2 h3{
+    font-family: shrikhand sans-serif;
+}
+
+body {
+    max-width: 100%;
+}
+
+/*header*/
+
