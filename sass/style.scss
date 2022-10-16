@@ -129,7 +129,9 @@ h1, p{
 
 /*Tablette*/
 
-@media screen and (min-width: 760px) and (max-width: 992px) {
+@media screen and (min-width: 770px) and (max-width: 992px) {
+
+    /*header*/
     .header__text p{
         margin: 3% 0;
     }
@@ -138,7 +140,19 @@ h1, p{
         width: 250px;
     }
 
-}
+    /*steps*/
+    .steps{
+        flex-flow: row wrap;
+        width: 95%;
+        margin: auto;
+        &__btn{
+            width: 250px;
+        }
+    }
+    .steps h1{
+        flex: 1 1 100%;
+    }
+    }
 
 /*Desktop*/
 
@@ -150,5 +164,19 @@ h1, p{
     .intro__btn{
         width: 250px;
     }
-}
+
+    /*steps*/
+    .steps{
+        flex-flow: row wrap;
+        width: 95%;
+        margin: auto;
+        &__btn{
+            width: 500px;
+        }
+    }
+    .steps h1{
+        flex: 1 1 100%;
+    }
+    }
+
 
