@@ -33,6 +33,16 @@ h1, p {
 .header__text p {
   margin-right: 9%;
 }
+@media screen and (min-width: 770px) and (max-width: 992px) {
+  .header__text p {
+    margin: 3% 0;
+  }
+}
+@media screen and (min-width: 992px) {
+  .header__text p {
+    margin: 2% 0;
+  }
+}
 .header .header__text i {
   padding-right: 20px;
 }
@@ -73,14 +83,48 @@ h1, p {
   color: white;
   border: none;
 }
+@media screen and (min-width: 770px) and (max-width: 992px) {
+  .intro__btn {
+    width: 250px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .intro__btn {
+    width: 250px;
+  }
+}
 
 /*Steps*/
 .steps {
   display: flex;
   flex-direction: column;
 }
+@media screen and (min-width: 770px) and (max-width: 992px) {
+  .steps {
+    flex-flow: row wrap;
+    width: 95%;
+    margin: auto;
+  }
+}
+@media screen and (min-width: 992px) {
+  .steps {
+    flex-flow: row wrap;
+    width: 95%;
+    margin: auto;
+  }
+}
 .steps h1 {
   margin: 30px 55px;
+}
+@media screen and (min-width: 770px) and (max-width: 992px) {
+  .steps h1 {
+    flex: 1 1 100%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .steps h1 {
+    flex: 1 1 100%;
+  }
 }
 .steps__btn {
   width: 70%;
@@ -93,6 +137,22 @@ h1, p {
   border: none;
   background-color: #F6F6F6;
   box-shadow: 5px 5px 7px -2px #b3b2b2;
+}
+@media screen and (min-width: 770px) and (max-width: 992px) {
+  .steps__btn {
+    display: flex;
+    flex-flow: row nowrap;
+    flex: 1 1 20%;
+    margin: 2%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .steps__btn {
+    display: flex;
+    flex-flow: row nowrap;
+    flex: 1 1 20%;
+    margin: 2%;
+  }
 }
 .steps__num {
   height: 30px;
@@ -119,48 +179,30 @@ h1, p {
   top: 35%;
 }
 
-/*Tablette*/
-@media screen and (min-width: 770px) and (max-width: 992px) {
-  /*header*/
-  .header__text p {
-    margin: 3% 0;
-  }
-  .intro__btn {
-    width: 250px;
-  }
-  /*steps*/
-  .steps {
-    flex-flow: row wrap;
-    width: 95%;
-    margin: auto;
-  }
-  .steps__btn {
-    width: 250px;
-  }
-  .steps h1 {
-    flex: 1 1 100%;
-  }
+/*Restos*/
+.restos {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  margin: auto;
 }
-/*Desktop*/
-@media screen and (min-width: 993px) {
-  .header__text p {
-    margin: 2% 0;
-  }
-  .intro__btn {
-    width: 250px;
-  }
-  /*steps*/
-  .steps {
-    flex-flow: row wrap;
-    width: 95%;
-    margin: auto;
-  }
-  .steps__btn {
-    width: 500px;
-  }
-  .steps h1 {
-    flex: 1 1 100%;
-  }
+.restos__cards {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.restos__link {
+  text-decoration: none;
+  color: black;
+}
+.restos__img {
+  width: 100%;
+  object-fit: cover;
+  height: 70%;
+}
+.restos__content {
+  flex-direction: row;
 }
 
 /*# sourceMappingURL=style.css.map */

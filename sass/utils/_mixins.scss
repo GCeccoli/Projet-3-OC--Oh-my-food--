@@ -1,0 +1,11 @@
+@mixin tablettes {
+    @media screen and (min-width: map-get($breakpoints, min-tab)) and (max-width: map-get($breakpoints, max-tab)){
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width:992px){
+        @content;
+    }
+}
