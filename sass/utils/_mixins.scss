@@ -9,3 +9,8 @@
         @content;
     }
 }
+
+@mixin background-new {
+    background-color: $color-tertiary;
+}
+

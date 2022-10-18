@@ -13,7 +13,7 @@ body{
     margin: auto;
 }
 
-h1, p{
+h1, h2, h3, p{
     font-family: Roboto, sans-serif;
 }
 
@@ -90,6 +90,10 @@ h1, p{
             width: 250px;
         }
     }
+    .intro__btn a{
+        text-decoration: none;
+        color: white;
+    }
 }
 
 /*Steps*/
@@ -108,7 +112,7 @@ h1, p{
         margin: auto;
     }
     h1{
-        margin: 30px 55px;
+        margin: 30px 20px;
         @include tablettes{
             flex: 1 1 100%;
         }
@@ -117,13 +121,13 @@ h1, p{
         }
     }
     &__btn{
-        width: 70%;
+        width: 85%;
         height: 60px;
         font-family: Roboto, sans-serif;
         font-size: 17px;
         border-radius: 25px;
         position: relative;
-        margin: 10px auto;
+        margin: 10px 20px 20px 40px;
         border: none;
         background-color: $background-general;
         box-shadow: 5px 5px 7px -2px #b3b2b2;
@@ -170,17 +174,39 @@ h1, p{
     .restos{
         display: flex;
         flex-direction: column;
-        width: 95%;
-        margin: auto;
+        width: 100%;
+        height: 1450px;
+        margin: 20% auto;
+        background-color: $background-header;
+        &__title{
+            font-size: 30px;
+            padding-left: 5%;
+        }
         &__cards{
-            width: 100%;
+            width: 90%;
             height: 300px;
             overflow: hidden;
             border-radius: 20px;
+            margin: 10px auto;
+            position: relative;
+            background-color: white;
         }
         &__link{
             text-decoration: none;
             color: black;
+        }
+        &__new{
+            position: absolute;
+            top: 5%;
+            right: 10%;
+            width: 20%;
+            height: 10%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            /*background-color: $color-tertiary;*/
+            @include background-new
         }
         &__img{
             width: 100%;
@@ -188,7 +214,26 @@ h1, p{
             height: 70%;
         }
         &__content{
+            display: flex;
             flex-direction: row;
+            align-items: center;
+            justify-content: space-between;  
+        }
+        &__text{
+            margin: 0 20px;
+        }
+        &__text h3{
+            margin: 10px auto;
+            font-size: 22px;
+        }
+        &__text p{
+            margin: 0;
+            font-size: 20px;
+            font-weight: 300;
+        }
+        &__icons{
+            font-size: 30px;
+            margin: 0 25px;
         }
     }
 

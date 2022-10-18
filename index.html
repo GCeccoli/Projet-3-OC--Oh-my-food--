@@ -26,13 +26,17 @@
       </div>
     </header>
     <main>
+      <!--Présentation-->
       <section class="intro">
         <div class="intro__text">
           <h1>Réservez le menu qui vous convient</h1>
           <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-          <button class="intro__btn" type="submit">Explorer nos restaurants</button>
+          <button class="intro__btn" type="submit">
+            <a href="#restos">Explorer nos restaurants</a>
+          </button>
         </div>
       </section>
+      <!--Section Description fonctionnement-->
       <section class="steps">
           <h1>Fonctionnement</h1>
           <button class="steps__btn">
@@ -51,14 +55,66 @@
             <span class="steps__choose">Dégustez au restaurant</span>
           </button>
       </section>
+      <!--Section Cartes Restaurants-->
       <section class="restos">
+        <h2 class="restos__title">Restaurants</h2>
         <article class="restos__cards">
           <a class="restos__link" href="#">
+            <p class="restos__new">Nouveau</p>
             <img class="restos__img" src="./images/restaurants/palette.jpg" alt="table de la palette francaise">
             <div class="restos__content">
-              <h3>La palette du goût</h3>
-              <p>Ménilmontant</p>
-              <i class="fa-regular fa-heart"></i>
+              <div class="restos__text">
+                <h3>La palette du goût</h3>
+                <p>Ménilmontant</p>
+              </div>
+              <div class="restos__icons">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </a>
+        </article>
+        <article class="restos__cards">
+          <a class="restos__link" href="#">
+            <p class="restos__new">Nouveau</p>
+            <img class="restos__img" src="./images/restaurants/note.jpg" alt="table de la note enchantée">
+            <div class="restos__content">
+              <div class="restos__text">
+                <h3>La note enchantée</h3>
+                <p>Charonne</p>
+              </div>
+              <div class="restos__icons">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </a>
+        </article>
+        <article class="restos__cards">
+          <a class="restos__link" href="#">
+            <!--<p class="restos__new">Nouveau</p>-->
+            <img class="restos__img" src="./images/restaurants/francaise.jpg" alt="table de A la Française">
+            <div class="restos__content">
+              <div class="restos__text">
+                <h3>A la française</h3>
+                <p>Cité Rouge</p>
+              </div>
+              <div class="restos__icons">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+          </a>
+        </article>
+        <article class="restos__cards">
+          <a class="restos__link" href="#">
+            <!--<p class="restos__new">Nouveau</p>-->
+            <img class="restos__img" src="./images/restaurants/sens.jpg" alt="table du délice des sens">
+            <div class="restos__content">
+              <div class="restos__text">
+                <h3>Le délice des sens</h3>
+                <p>Folie-Méricourt</p>
+              </div>
+              <div class="restos__icons">
+                <i class="fa-regular fa-heart"></i>
+              </div>
             </div>
           </a>
         </article>
