@@ -474,6 +474,11 @@ footer {
   margin: 2% 0;
   font-size: 19px;
 }
+@media screen and (min-width: 992px) {
+  .menu__plat h3 {
+    font-size: 17px;
+  }
+}
 .menu__infos {
   display: flex;
   flex-direction: row;
@@ -486,6 +491,11 @@ footer {
   padding-right: 4%;
 }
 @media screen and (min-width: 992px) {
+  .menu__infos--policetype {
+    padding-right: 3%;
+  }
+}
+@media screen and (min-width: 992px) {
   .menu__infos {
     margin: 5% 0;
   }
@@ -494,6 +504,11 @@ footer {
   margin: 0;
   padding: 5px 0;
   font-weight: 300;
+}
+@media screen and (min-width: 992px) {
+  .menu__infos p {
+    font-size: 14px;
+  }
 }
 .menu__btn {
   display: flex;
