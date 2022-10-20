@@ -316,47 +316,65 @@ h2, h3, p{
     }
 
     /*Image fond menu palette*/
-    .background-image{
+    .back{
         width: 100%;
-        height: 30%;
+        overflow: hidden;
+        &__img{
+            width: 100%;
+            height: 30%;
+            object-fit: cover;
+        }
     }
 
     .menu{
         display: flex;
         flex-direction: column;
         margin: auto;
-        width: 90%;
+        width: 100%;
+        background-color: $background-general;
+        border-radius: 50px 50px 0 0;
+        position: absolute;
+        top: 50%;
         &__title{
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
-            width: 95%;
+            width: 85%;
+            margin: 30px auto;
             &--heartsize{
                 font-size: 30px;
             }
+        }
+        &__title h1{
+            font-size: 35px;
+        }
+        &__cards{
+            width: 90%;
+            margin: auto;
         }
         &__type{
             text-transform: uppercase;
             font-weight: 300;
             font-size: 18px;
-            margin-bottom: 25px;
+            margin: 5% 2%;
             &--underline{
                 text-decoration: underline lightgreen 3px;
                 text-underline-offset: 10px;
             }
         }
         &__plat{
-            background-color: lightblue;
+            background-color: white;
             display: flex;
             flex-direction: column;
             border-radius: 20px;
-            padding: 0 5%;
+            padding: 0 2%;
             height: 80px;
+            margin: 15px auto;
             }
         &__plat h3{
             margin: 10px 0;
-            font-size: 22px;
+            font-size: 19px;
         }
         &__infos{
             display: flex;
@@ -366,6 +384,7 @@ h2, h3, p{
             &--policetype{
                 font-weight: 700;
                 font-family: Roboto, sans-serif;
+                padding-right: 4%;
             }
         }
         &__infos p{
@@ -373,6 +392,24 @@ h2, h3, p{
             padding: 5px 0;
             font-weight: 300;
         }
+        &__btn{
+            display: flex;
+            width: 45%;
+            height: 50px;
+            font-size: 17px;
+            margin: 10% auto;
+            border-radius: 25px;
+            background: linear-gradient($color-secondary,$color-primary);
+            border: none;
+        }
+        &__btn a{
+            display: flex;
+            align-items: center;
+            margin: auto;
+            text-decoration: none;
+            color: white;
+        }
+
         
     }
 
