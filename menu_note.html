@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/e1ec001687.js"
+      crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./node_modules/normalize.css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap"
+      rel="stylesheet"/>
+    <title>Oh my food !</title>
+  </head>
+  <body>
+    <main>
+      <!--Header menu-->
+        <header class="header">
+            <img class="header__img" src="./images/logo/ohmyfood@2x.svg" alt="Logo Ohmyfood" />
+            <a href="index.html" class="header__arrow" ><i class="fa-solid fa-arrow-left"></i></a>
+        </header>
+
+      <!--Image-->
+      <div class="back">
+        <img class="back__img" src="./images/restaurants/note.jpg" alt="Table la note enchantée">
+      </div>
+      <!--Menu-->
+        <div class="menu">
+          <section class="menu__title">
+            <h1>La note enchantée</h1>
+            <i class="fa-regular fa-heart menu__title--heartsize"></i>
+          </section>
+
+      <!--Section entrées-->
+          <section class="menu__cards">
+            <h2 class="menu__type"><span class="menu__type--underline">Entr</span>ées</h2>
+            <div class="menu__plat">
+              <h3>Ravioles de foie gras</h3>
+              <div class="menu__infos">
+                <p>Accompagnés de leur crème à la truffe</p>
+                <span class="menu__infos--policetype">25€</span>
+              </div>
+            </div>
+            <div class="menu__plat">
+              <h3>Caviar osciètre </h3>
+              <div class="menu__infos">
+                <p>Sur blini à la farine de blé noir</p>
+                <span class="menu__infos--policetype">35€</span>
+              </div>
+            </div>
+            <div class="menu__plat">
+              <h3>Homard et espuma de potiron</h3>
+              <div class="menu__infos">
+                <p>Mariné aux zestes d'orange</p>
+                <span class="menu__infos--policetype">20€</span>
+              </div>
+            </div>
+            <div class="menu__plat">
+                <h3>Foie gras de canard cuit entier</h3>
+                <div class="menu__infos">
+                  <p>Confiture de figue et pain toasté</p>
+                  <span class="menu__infos--policetype">35€</span>
+                </div>
+              </div>
+          </section>
+
+          <!--Section plats-->
+          <section class="menu__cards">
+            <h2 class="menu__type"><span class="menu__type--underline">Plat</span>s</h2>
+            <div class="menu__plat">
+              <h3>Noix de coquilles Saint-Jacques</h3>
+              <div class="menu__infos">
+                <p>Sur lit de purée de céleri-rave</p>
+                <span class="menu__infos--policetype">40€</span>
+              </div>
+            </div>
+            <div class="menu__plat">
+              <h3>Langoustine poêlée</h3>
+              <div class="menu__infos">
+                <p>Purée de patate douce</p>
+                <span class="menu__infos--policetype">35€</span>
+              </div>
+            </div>
+            <div class="menu__plat">
+              <h3>Mijoté de queue de boeuf </h3>
+              <div class="menu__infos">
+                <p>Et riz sauvage aux zestes de citron</p>
+                <span class="menu__infos--policetype">44€</span>
+              </div>
+            </div>
+          </section>
+
+          <!--Section desserts-->
+          <section class="menu__cards">
+            <h2 class="menu__type"><span class="menu__type--underline">Dess</span>erts</h2>
+            <div class="menu__plat">
+              <h3>Macaron noisette et chocolat</h3>
+              <div class="menu__infos">
+                <p>Glace au caramel brun et sel de Guérande</p>
+                <span class="menu__infos--policetype">18€</span>
+              </div>
+            </div>
+            <div class="menu__plat">
+              <h3>Baba au rhum revisité </h3>
+              <div class="menu__infos">
+                <p>Avec son coulis de citron</p>
+                <span class="menu__infos--policetype">22€</span>
+              </div>
+            </div>
+            <div class="menu__plat">
+              <h3>Tarte au citron meringuée </h3>
+              <div class="menu__infos">
+                <p>Déstructurée</p>
+                <span class="menu__infos--policetype">23€</span>
+              </div>
+            </div>
+            <!--Bouton commander-->
+            <button class="menu__btn" type="submit">
+              <a href="#">Commander</a>
+            </button>
+          </section>
+
+        <!--Footer-->
+        <footer>
+          <div class="footer">
+            <div class="footer__restaurant">
+              <h3 class="footer__title">ohmyfood</h3>
+              <ul>
+                <li>
+                  <a class="footer__link" href="">
+                    <i class="fa-solid fa-utensils"></i>
+                    <span>Proposer votre restaurant</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="footer__link" href="#">
+                    <i class="fa-solid fa-handshake-angle"></i>
+                    <span>Devenir partenaire</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="footer__link" href="#">Mention Légales</a>
+                </li>
+                <li>
+                  <a class="footer__link" href="#">Contact</a>
+                </li>
+              </ul>
+          </div>
+        </footer>
+      </div>
+    </main>
+  </body>
+</html>
