@@ -149,6 +149,10 @@ h2, h3, p{
         border: none;
         background-color: $background-general;
         box-shadow: 5px 5px 7px -2px #b3b2b2;
+        transition: background-color 400ms;
+        &:hover{
+            background-color: $color-primary;
+        }
         @include tablettes {
             display: flex;
             flex-flow: row nowrap;
