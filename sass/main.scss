@@ -311,28 +311,32 @@ h2, h3, p{
         &__icons{
             font-size: 30px;
             margin: 0 25px;
+            display: inline-block;
         }
-        &__fa-heart{
-            z-index: 1;
-            position: relative;
-                &:hover{
+        .fa-heart{
+            font-weight: bold;
+            color: white;
+            &:hover{
+                &::after{
                     opacity: 1;
-                    &::after{
-                        content: "";
-                        opacity: 0;
-                        @include back-gradient;
-                        transition: opacity 300ms;
-                        z-index: -1;
-                        position: absolute;
-                        top: 0;
-                        right: 0;
-                        left: 0;
-                        bottom: 0;
-                    }
+                    z-index: 1;
                 }
             }
-        
+                &::after{
+                    content: "";
+                    opacity: 0;
+                    color: green;
+                    transition: opacity 300ms;
+                    z-index: -1;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    left: 0;
+                    bottom: 0;
+                }
+        }
     }
+
 
     /*Footer*/
 
