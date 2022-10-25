@@ -198,6 +198,14 @@ h2, h3, p{
         font-size: 20px;
         color: $color-icons;
         z-index: 1;
+        @include tablettes{
+            left: 9%;
+            top: 30%;
+        }
+        @include desktop{
+            left: 9%;
+            top: 30%;
+        }
         &:hover{
             opacity: 1;
             &::after{
@@ -282,6 +290,8 @@ h2, h3, p{
             align-items: center;
             justify-content: center;
             border-radius: 5px;
+            color: darken($color-tertiary, 40);
+            font-weight: 700;
             /*background-color: $color-tertiary;*/
             @include background-new
         }
@@ -314,12 +324,11 @@ h2, h3, p{
             display: inline-block;
         }
         .fa-heart{
-            font-weight: bold;
-            color: white;
             &:hover{
                 &::after{
                     opacity: 1;
                     z-index: 1;
+                    font-weight: bold;
                 }
             }
                 &::after{
@@ -336,7 +345,6 @@ h2, h3, p{
                 }
         }
     }
-
 
     /*Footer*/
 

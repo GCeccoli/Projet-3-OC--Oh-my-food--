@@ -213,6 +213,18 @@ h2, h3, p {
   color: #7E7E7E;
   z-index: 1;
 }
+@media screen and (min-width: 770px) and (max-width: 992px) {
+  .steps .fa-solid {
+    left: 9%;
+    top: 30%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .steps .fa-solid {
+    left: 9%;
+    top: 30%;
+  }
+}
 .steps .fa-solid:hover {
   opacity: 1;
 }
@@ -308,6 +320,8 @@ h2, h3, p {
   align-items: center;
   justify-content: center;
   border-radius: 5px;
+  color: #278870;
+  font-weight: 700;
   /*background-color: $color-tertiary;*/
   background-color: #99e2d0;
 }
@@ -339,13 +353,10 @@ h2, h3, p {
   margin: 0 25px;
   display: inline-block;
 }
-.restos .fa-heart {
-  font-weight: bold;
-  color: white;
-}
 .restos .fa-heart:hover::after {
   opacity: 1;
   z-index: 1;
+  font-weight: bold;
 }
 .restos .fa-heart::after {
   content: "";
