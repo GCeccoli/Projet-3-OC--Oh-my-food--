@@ -129,8 +129,9 @@ h2, h3, p{
         width: 95%;
         margin: auto;
     }
-    h1{
+    h2{
         margin: 30px 20px;
+        font-size: 30px;
         @include tablettes{
             flex: 1 1 100%;
         }
@@ -157,7 +158,7 @@ h2, h3, p{
         }
         &::after{
             content: "";
-            background-color: lighten($color-primary, 35);
+            background-color: lighten($color-primary, 30);
             opacity: 0;
             transition: opacity 300ms;
             position: absolute;
@@ -292,7 +293,6 @@ h2, h3, p{
             border-radius: 5px;
             color: darken($color-tertiary, 40);
             font-weight: 700;
-            /*background-color: $color-tertiary;*/
             @include background-new
         }
         &__img{
@@ -321,28 +321,20 @@ h2, h3, p{
         &__icons{
             font-size: 30px;
             margin: 0 25px;
-            display: inline-block;
+            position: absolute;
+            top: 80%;
+            left: 80%;
         }
         .fa-heart{
             &:hover{
-                &::after{
-                    opacity: 1;
-                    z-index: 1;
-                    font-weight: bold;
-                }
+                font-weight: bold;
+                background-image: linear-gradient($color-secondary, $color-primary);
+                background-clip: text;
+                cursor: pointer;
+                color: transparent;
+                -webkit-background-clip: text;
+                transition: all 500ms ease-in-out;
             }
-                &::after{
-                    content: "";
-                    opacity: 0;
-                    color: green;
-                    transition: opacity 300ms;
-                    z-index: -1;
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-                    left: 0;
-                    bottom: 0;
-                }
         }
     }
 

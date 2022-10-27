@@ -137,16 +137,17 @@ h2, h3, p {
     margin: auto;
   }
 }
-.steps h1 {
+.steps h2 {
   margin: 30px 20px;
+  font-size: 30px;
 }
 @media screen and (min-width: 770px) and (max-width: 992px) {
-  .steps h1 {
+  .steps h2 {
     flex: 1 1 100%;
   }
 }
 @media screen and (min-width: 992px) {
-  .steps h1 {
+  .steps h2 {
     flex: 1 1 100%;
   }
 }
@@ -168,7 +169,7 @@ h2, h3, p {
 }
 .steps__btn::after {
   content: "";
-  background-color: #f2eafb;
+  background-color: #e4d5f6;
   opacity: 0;
   transition: opacity 300ms;
   position: absolute;
@@ -322,7 +323,6 @@ h2, h3, p {
   border-radius: 5px;
   color: #278870;
   font-weight: 700;
-  /*background-color: $color-tertiary;*/
   background-color: #99e2d0;
 }
 .restos__img {
@@ -351,24 +351,18 @@ h2, h3, p {
 .restos__icons {
   font-size: 30px;
   margin: 0 25px;
-  display: inline-block;
-}
-.restos .fa-heart:hover::after {
-  opacity: 1;
-  z-index: 1;
-  font-weight: bold;
-}
-.restos .fa-heart::after {
-  content: "";
-  opacity: 0;
-  color: green;
-  transition: opacity 300ms;
-  z-index: -1;
   position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
+  top: 80%;
+  left: 80%;
+}
+.restos .fa-heart:hover {
+  font-weight: bold;
+  background-image: linear-gradient(#ff79da, #9356DC);
+  background-clip: text;
+  cursor: pointer;
+  color: transparent;
+  -webkit-background-clip: text;
+  transition: all 500ms ease-in-out;
 }
 
 /*Footer*/
