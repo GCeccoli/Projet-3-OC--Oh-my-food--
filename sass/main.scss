@@ -327,14 +327,33 @@ h2, h3, p{
         }
         .fa-heart{
             &:hover{
-                font-weight: bold;
-                background-image: linear-gradient($color-secondary, $color-primary);
-                background-clip: text;
-                cursor: pointer;
-                color: transparent;
-                -webkit-background-clip: text;
-                transition: all 500ms ease-in-out;
+            cursor: pointer;
+            font-weight: 800;
+            background-image: linear-gradient($color-secondary, $color-primary);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: heart-animation 1000ms;
             }
+        }
+        
+        @keyframes heart-animation{
+            0%{
+                opacity: 0;
+            }
+            40%{
+                opacity: .4;
+            }
+            60%{
+                opacity: .6;
+            }
+            80%{
+                opacity: .8;
+            }
+            100%{
+                opacity: 1;
+            }
+        
         }
     }
 
