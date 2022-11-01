@@ -166,6 +166,7 @@ h2, h3, p {
 }
 .steps__btn:hover::after {
   opacity: 1;
+  /*box-shadow: 5px 5px 7px -2px darken(#b3b2b2, 20);*/
 }
 .steps__btn::after {
   content: "";
@@ -179,6 +180,7 @@ h2, h3, p {
   bottom: 0;
   z-index: -1;
   border-radius: 25px;
+  box-shadow: 5px 5px 7px -2px #807f7f;
 }
 @media screen and (min-width: 770px) and (max-width: 992px) {
   .steps__btn {
@@ -294,6 +296,10 @@ h2, h3, p {
   margin: 10px auto;
   position: relative;
   background-color: white;
+  transition: box-shadow 500ms;
+}
+.restos__cards:hover {
+  box-shadow: 5px 5px 5px #7E7E7E;
 }
 @media screen and (min-width: 770px) and (max-width: 992px) {
   .restos__cards {
@@ -366,7 +372,7 @@ h2, h3, p {
 }
 @keyframes heart-animation {
   0% {
-    opacity: 0;
+    opacity: 0.2;
   }
   40% {
     opacity: 0.4;
