@@ -486,10 +486,103 @@ h2, h3, p{
                 margin: 2%;
             }
         }
-        &__plat{
+        .choice{
             background-color: white;
             display: flex;
-            flex-direction: column;
+            flex-flow: row wrap;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 20px;
+            height: 80px;
+            margin: 15px 0;
+            overflow: hidden;
+            cursor: pointer;
+            &__title{
+                flex: 1 1 100%;
+                margin: 10px 15px;
+            }
+            &__text{
+                flex: 0 1 75%;
+                margin: 10px 15px;
+                white-space: nowrap;
+                /*overflow: hidden;
+                text-overflow: ellipsis;*/
+            }
+            &:hover{
+                .choice__text{   
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+                }
+                
+            }
+            &--policetype{
+                font-weight: bold;
+                font-family: Roboto, sans-serif;
+                margin-right: -20px;
+                transform: translateX(0);
+                transition: transform 600ms ease-in-out;
+                width: 20px;
+            }
+            &:hover{
+                .choice--policetype{
+                    transform: translateX(-140%);
+                }
+            }
+            &__check{
+                align-self: center;
+                transform: translateX(100%);
+                opacity: 0;
+                transition: transform 600ms, 600ms ease-in-out;
+                background-color: $color-tertiary;
+                height: 100%;
+                width: 50px;
+                align-items: center;
+                justify-content: center;
+                display: flex;
+                margin-top: -42px;
+                color: white;
+            }
+            &:hover{
+                .choice__check{
+                    transform: translateX(0);
+                    opacity: 1;
+                    overflow: hidden;
+                }
+            }
+            &__check i{
+                transition: 800ms ease-in-out;
+                width: 25px;
+                height: 25px;
+                border-radius: 100%;
+                background-color: white;
+                font-weight: bold;
+                color: $color-tertiary;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            &:hover{
+                .choice__check i{
+                    transform: rotate(360deg);
+                }
+            }
+            @include tablettes{
+                width: 70%;
+            }
+            @include desktop{
+                flex: 0 1 30%;
+                width: 90%;
+                margin: 1%;
+                height: 100px;
+            }
+        }
+        
+
+        /*&__plat{
+            background-color: white;
+            display: flex;
+            flex-flow: row wrap;
             border-radius: 20px;
             padding: 0 2%;
             height: 80px;
@@ -535,7 +628,7 @@ h2, h3, p{
             @include desktop{
                 font-size: 14px;
             }
-        }
+        }*/
         &__btn{
             display: flex;
             width: 45%;
