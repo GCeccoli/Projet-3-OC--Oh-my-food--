@@ -19,8 +19,13 @@
   </head>
 
   <body>
-
-    <header class="header">
+    <!--Loader-->
+    <div class="spinload">
+      <div class="loader loader__spin"></div>
+      <span class="loader loader__text">Oh My Food !</span>
+    </div>
+    <!--Header-->
+    <header class="header headerindex">
       <img class="header__img" src="./images/logo/ohmyfood@2x.svg" alt="Logo Ohmyfood" />
       <div class="header__text">
         <i class="fa-solid fa-location-dot"></i>
@@ -28,14 +33,14 @@
       </div>
     </header>
 
-    <main>
+    <main class="general">
       <!--Présentation-->
       <section class="intro">
         <div class="intro__text">
           <h1>Réservez le menu qui vous convient</h1>
           <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
           <button class="intro__btn" type="submit">
-            <a href="#restos">Explorer nos restaurants</a>
+            <span>Explorer nos restaurants</span>
           </button>
         </div>
       </section>

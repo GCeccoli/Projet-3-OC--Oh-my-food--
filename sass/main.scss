@@ -21,7 +21,120 @@ h2, h3, p{
     font-family: Roboto, sans-serif;
 }
 
+.headerindex, .general {
+    animation: flou 9s linear;
+}
+
+/*Loader*/
+.spinload{
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    opacity: 1;
+    @include desktop {
+        left: 40%;
+        top: 30%;
+    }
+}
+
+.loader{
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader__spin{
+    width: 250px;
+    height: 250px;
+    border: 5px solid transparent;
+    border-radius: 50%;
+    border-top-color: $color-primary;
+    border-bottom-color: $color-primary;
+    animation: spin 3s ease-in-out 3;
+    position: absolute;
+    &:before{
+        content: "";
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        left: 5px;
+        bottom: 5px;
+        border-radius: 50%;
+        border: 5px solid transparent;
+        border-top-color: $color-secondary;
+        border-bottom-color: $color-secondary;
+        animation: spin 3s ease-in-out 3;
+    }
+    &:after{
+        content: "";
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        left: 15px;
+        bottom: 15px;
+        border-radius: 50%;
+        border: 5px solid transparent;
+        border-top-color: $color-tertiary;
+        border-bottom-color: $color-tertiary;
+        animation: spin 3s ease-in-out 3;
+    }
+}
+
+.loader__text{
+    position: absolute;
+    font-size: 40px;
+    background: linear-gradient(90deg, $color-primary, $color-secondary, $color-tertiary);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+    animation: text 3s ease-in-out 3;
+    font-family: Shrikhand, serif;
+    font-weight: bold;
+    align-self: center;
+    width: 300px;
+    top: 100px;
+    left: -20px;
+}
+
+@keyframes spin {
+    0% {
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes text {
+    0% {
+        opacity: 1;
+        background-position: -500%;
+    }
+
+    100% {
+        opacity: 1;
+        background-position: 500%;
+    }
+}
+
+@keyframes flou {
+    from {
+        opacity: 0.1;
+    }
+
+    to {
+        opacity: 0.1;
+    }
+}
 /* header*/
+
+.headerindex {
+    animation: flou 9s linear;
+}
 
 .header{
     display: flex;
@@ -108,8 +221,7 @@ h2, h3, p{
             width: 20%;
         }
     }
-    .intro__btn a{
-        text-decoration: none;
+    .intro__btn span{
         color: white;
     }
 }
@@ -526,7 +638,7 @@ h2, h3, p{
             }
             &:hover{
                 .choice--policetype{
-                    transform: translateX(-140%);
+                    transform: translateX(-150%);
                 }
             }
             &__check{
