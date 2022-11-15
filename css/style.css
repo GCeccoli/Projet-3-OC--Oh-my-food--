@@ -560,56 +560,6 @@ footer {
   border-radius: 50px 50px 0 0;
   position: absolute;
   top: 40%;
-  /*&__plat{
-      background-color: white;
-      display: flex;
-      flex-flow: row wrap;
-      border-radius: 20px;
-      padding: 0 2%;
-      height: 80px;
-      margin: 15px auto;
-      @include tablettes{
-          width: 70%;
-      }
-      @include desktop{
-          flex: 0 1 30%;
-          width: 90%;
-          margin: 1%;
-          height: 100px;
-      }
-  }
-  &__plat h3{
-      margin: 2% 0;
-      font-size: 19px;
-      @include desktop{
-          font-size: 17px;
-      }
-  }
-  &__infos{
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      &--policetype{
-          font-weight: 700;
-          font-family: Roboto, sans-serif;
-          padding-right: 4%;
-          @include desktop{
-              padding-right: 3%;
-          }
-      }
-      @include desktop{
-          margin: 5% 0;
-      }
-  }
-  &__infos p{
-      margin: 0;
-      padding: 5px 0;
-      font-weight: 300;
-      @include desktop{
-          font-size: 14px;
-      }
-  }*/
 }
 @media screen and (min-width: 770px) and (max-width: 992px) {
   .menu {
@@ -699,6 +649,38 @@ footer {
   margin: 15px 0;
   overflow: hidden;
   cursor: pointer;
+  opacity: 0;
+  animation: animchoice 2000ms ease-in-out forwards;
+}
+.menu .choice--1 {
+  animation-delay: 200ms;
+}
+.menu .choice--2 {
+  animation-delay: 400ms;
+}
+.menu .choice--3 {
+  animation-delay: 600ms;
+}
+.menu .choice--4 {
+  animation-delay: 800ms;
+}
+.menu .choice--5 {
+  animation-delay: 1000ms;
+}
+.menu .choice--6 {
+  animation-delay: 1200ms;
+}
+.menu .choice--7 {
+  animation-delay: 1400ms;
+}
+.menu .choice--8 {
+  animation-delay: 1600ms;
+}
+.menu .choice--9 {
+  animation-delay: 1800ms;
+}
+.menu .choice--10 {
+  animation-delay: 2000ms;
 }
 .menu .choice__title {
   flex: 1 1 100%;
@@ -799,6 +781,21 @@ footer {
 @media screen and (min-width: 992px) {
   .menu__btn a {
     font-size: 30px;
+  }
+}
+
+/* Apparition progressive */
+@keyframes animchoice {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
