@@ -641,6 +641,9 @@ h2, h3, p{
                 flex: 0 1 75%;
                 margin: 10px 15px;
                 white-space: nowrap;
+                &:hover {
+                    flex: 0 1 60%;
+                }
             }
             &:hover{
                 .choice__text{   

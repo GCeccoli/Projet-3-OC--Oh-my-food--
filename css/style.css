@@ -86,8 +86,8 @@ h2, h3, p {
   background: linear-gradient(90deg, #9356DC, #ff79da, #99e2d0);
   background-repeat: no-repeat;
   background-size: 80%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  /*-webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);*/
   animation: text 3s ease-in-out 3;
   font-family: Shrikhand, serif;
   font-weight: bold;
@@ -713,6 +713,9 @@ footer {
   flex: 0 1 75%;
   margin: 10px 15px;
   white-space: nowrap;
+}
+.menu .choice__text:hover {
+  flex: 0 1 60%;
 }
 .menu .choice:hover .choice__text {
   text-overflow: ellipsis;
