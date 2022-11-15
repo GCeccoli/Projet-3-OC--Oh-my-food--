@@ -11,6 +11,7 @@
 body{
     width: 100%;
     margin: auto;
+    height: 100%;
 }
 
 h1{
@@ -87,8 +88,8 @@ h2, h3, p{
     background: linear-gradient(90deg, $color-primary, $color-secondary, $color-tertiary);
     background-repeat: no-repeat;
     background-size: 80%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+    /*-webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);*/
     animation: text 3s ease-in-out 3;
     font-family: Shrikhand, serif;
     font-weight: bold;
@@ -481,6 +482,12 @@ h2, h3, p{
     footer{
         width: 100%;
         background-color: #353535;
+        position: relative;
+        top: 100%;
+        @include desktop {
+            width: 90%;
+            margin: 0 auto;
+        }
     }
     .footer{
         display: flex;
@@ -519,9 +526,18 @@ h2, h3, p{
     .back{
         width: 100%;
         overflow: hidden;
+        @include desktop {
+            width: 90%;
+            margin: auto;
+        }
         &__img{
             width: 100%;
             object-fit: cover;
+            position: absolute;
+            @include desktop {
+                width: 90%;
+                border-radius: 50px;
+            }
         }
     }
 
@@ -530,17 +546,17 @@ h2, h3, p{
     .menu{
         display: flex;
         flex-direction: column;
-        margin: auto;
+        margin-top: 50%;
         width: 100%;
         background-color: $background-general;
         border-radius: 50px 50px 0 0;
-        position: absolute;
-        top: 40%;
+        position: relative;
         @include tablettes{
-            top: 50%;
+            margin-top: 50%;
         }
         @include desktop{
-            top: 70%;
+            margin: 35% auto 0;
+            width: 90%;
         }
         &__title{
             display: flex;
@@ -584,7 +600,7 @@ h2, h3, p{
         &__type{
             text-transform: uppercase;
             font-weight: 300;
-            font-size: 18px;
+            font-size: 20px;
             margin: 4% 2%;
             &--underline{
                 text-decoration: underline lightgreen 3px;
@@ -595,8 +611,8 @@ h2, h3, p{
                 font-size: 20px;
             }
             @include desktop{
-                flex: 1 1 100%;
                 margin: 2%;
+                font-size: 25px;
             }
         }
         .choice{
@@ -625,8 +641,6 @@ h2, h3, p{
                 flex: 0 1 75%;
                 margin: 10px 15px;
                 white-space: nowrap;
-                /*overflow: hidden;
-                text-overflow: ellipsis;*/
             }
             &:hover{
                 .choice__text{   
