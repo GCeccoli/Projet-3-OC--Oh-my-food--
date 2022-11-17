@@ -1,0 +1,326 @@
+/* ---- Animation loader ---- */
+
+.headerindex, .general {
+    animation: flou 9s linear;
+    @include desktop {
+        width: 90%;
+        margin: auto;
+    }
+}
+
+.intro{
+    width: 100%;
+    background-color: $background-general;
+    height: 330px;
+    &__text{
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        text-align: center;
+    }
+    &__text h1{
+        font-size: 30px;
+        margin-top: 30px;
+    }
+    &__text p{
+        font-size: 18px;
+        font-weight: 200;
+        margin: 0;    
+    }
+    &__btn{
+        width: 70%;
+        height: 50px;
+        font-size: 17px;
+        align-self: center;
+        margin: 10%;
+        border-radius: 25px;
+        @include back-gradient;
+        color: white;
+        border: none;
+        @include tablettes{
+            width: 20%;
+        }
+        @include desktop {
+            width: 20%;
+        }
+    }
+    .intro__btn span{
+        color: white;
+    }
+}
+
+/*Steps*/
+
+.steps{
+    display: flex;
+    flex-direction: column;
+    @include tablettes{
+        width: 95%;
+        margin: 3% auto;
+    }
+    @include desktop{
+        flex-flow: row wrap;
+        width: 100%;
+        margin: auto;
+        padding: 5% 0;
+        background-color: $background-general;
+    }
+    h2{
+        margin: 30px 20px;
+        font-size: 30px;
+        @include tablettes{
+            flex: 1 1 100%;
+        }
+        @include desktop {
+            flex: 1 1 100%;
+        }
+    }
+    &__btn{
+        width: 85%;
+        height: 60px;
+        font-family: Roboto, sans-serif;
+        font-size: 17px;
+        border-radius: 25px;
+        position: relative;
+        margin: 10px 20px 20px 40px;
+        border: none;
+        background-color: $background-general;
+        box-shadow: 5px 5px 7px -2px #b3b2b2;
+        z-index: 1;
+        &:hover{
+            &::after{
+                opacity: 1;
+            }
+        }
+        &::after{
+            content: "";
+            background-color: lighten($color-primary, 30);
+            opacity: 0;
+            transition: opacity 300ms;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            z-index: -1;
+            border-radius: 25px;
+            box-shadow: 5px 5px 7px -2px darken(#b3b2b2, 20);
+        }
+        @include tablettes {
+            display: flex;
+            flex-flow: row nowrap;
+            margin: 2% auto;
+        }
+        @include desktop {
+            display: flex;
+            flex-flow: row nowrap;
+            flex: 1 1 20%;
+            margin: 2%;
+        }
+    }
+    &__num{
+        height: 30px;
+        width: 30px;
+        border-radius: 100%;
+        background: $color-primary;
+        position: absolute;
+        top: 13px;
+        left: -17px;
+        padding: 5px;
+        color: white;
+    }
+    .fa-solid{
+        position: relative;
+        right: 40%;
+        font-size: 20px;
+        color: $color-icons;
+        z-index: 1;
+        @include tablettes{
+            left: 9%;
+            top: 30%;
+        }
+        @include desktop{
+            left: 9%;
+            top: 30%;
+        }
+        &:hover{
+            opacity: 1;
+            &::after{
+                content: "";
+                color: $color-primary;
+                opacity: 0;
+                transition: opacity 300ms;
+                z-index: -1;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
+        }
+    }
+    &__choose{
+        font-weight: 700;
+        position: absolute;
+        left: 23%;
+        top: 35%;
+    }
+}
+
+/*Restos*/
+    .restos{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-bottom: 50px;
+        background-color: $background-header;
+        @include tablettes{
+            display: flex;
+            flex-flow: row wrap;
+            height: 100%;
+        }
+        @include desktop{
+            display: flex;
+            flex-flow: row wrap;
+            height: 100%;
+        }
+        &__title{
+            font-size: 30px;
+            padding-left: 5%;
+            @include tablettes{
+                flex: 1 1 100%;
+                padding-left: 2%;
+            }
+            @include desktop{
+                flex: 1 1 100%;
+                padding-left: 2%;
+            }
+        }
+        &__cards{
+            width: 90%;
+            height: 300px;
+            overflow: hidden;
+            border-radius: 20px;
+            margin: 10px auto;
+            position: relative;
+            background-color: white;
+            transition: box-shadow 500ms;
+            &:hover{
+                box-shadow: 5px 5px 5px $color-icons;
+            }
+
+            @include tablettes{
+                flex: 1 1 40%;
+                margin: 20px;
+            }
+            @include desktop{
+                flex: 1 1 40%;
+                margin: 25px;
+            }
+        }
+        &__link{
+            text-decoration: none;
+            color: black;
+        }
+        &__new{
+            position: absolute;
+            top: 5%;
+            right: 10%;
+            width: 20%;
+            height: 10%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            color: darken($color-tertiary, 40);
+            font-weight: 700;
+            @include background-new
+        }
+        &__img{
+            width: 100%;
+            object-fit: cover;
+            height: 70%;
+        }
+        &__content{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;  
+        }
+        &__text{
+            margin: 0 20px;
+        }
+        &__text h3{
+            margin: 10px auto;
+            font-size: 22px;
+        }
+        &__text p{
+            margin: 0;
+            font-size: 20px;
+            font-weight: 300;
+        }
+        &__icons{
+            font-size: 30px;
+            margin: 0 25px;
+            position: absolute;
+            top: 80%;
+            left: 80%;
+        }
+        .fa-heart{
+            &:hover{
+            cursor: pointer;
+            font-weight: 800;
+            background-image: linear-gradient($color-secondary, $color-primary);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: heart-animation 1000ms;
+            }
+        }    
+    }
+
+    /*Footer*/
+
+    footer{
+        width: 100%;
+        background-color: #353535;
+        position: relative;
+        top: 100%;
+        @include desktop {
+            width: 90%;
+            margin: 0 auto;
+        }
+    }
+    .footer{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        @include tablettes{
+            align-items: center;
+        }
+        @include desktop{
+            align-items: center;
+        }
+        &__title{
+            color: white;
+            font-family: Shrikhand, serif;
+            font-size: 25px;
+            padding-left: 35px;
+        }
+        &__link{
+            text-decoration: none;
+            color: white;
+        }
+        li{
+            list-style: none;
+            line-height: 25px;
+        }
+        .fa-utensils,
+        .fa-handshake-angle{
+            font-size: 14px;
+            width: 25px;
+            height: 20px;
+        }
+
+    }
