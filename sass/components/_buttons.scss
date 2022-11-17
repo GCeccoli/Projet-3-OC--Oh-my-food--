@@ -1,0 +1,51 @@
+/* ---- Bouton "Explorer nos restaurants" ---- */
+
+.intro__btn{
+    width: 70%;
+    height: 50px;
+    font-size: 17px;
+    align-self: center;
+    margin: 10%;
+    border-radius: 25px;
+    @include back-gradient;
+    color: white;
+    border: none;
+    @include tablettes{
+        width: 20%;
+    }
+    @include desktop {
+        width: 20%;
+    }
+}
+.intro__btn span{
+    color: white;
+}
+
+
+
+
+/* ---- Bouton "Commander" ---- */
+
+.menu__btn{
+    display: flex;
+    width: 45%;
+    height: 50px;
+    font-size: 17px;
+    margin: 10% auto;
+    border-radius: 25px;
+    background: linear-gradient($color-secondary,$color-primary);
+    border: none;
+    @include desktop{
+        width: 30%;
+    }
+}
+.menu__btn a{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    text-decoration: none;
+    color: white;
+    @include desktop{
+        font-size: 30px;
+    }
+}

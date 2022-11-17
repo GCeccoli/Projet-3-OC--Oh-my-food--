@@ -17,3 +17,9 @@
 @mixin back-gradient {
     background: linear-gradient($color-secondary,$color-primary);
 }
+
+@mixin ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
