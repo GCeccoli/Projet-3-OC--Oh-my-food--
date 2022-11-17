@@ -1,4 +1,65 @@
-/*variables couleurs*/
+/*variables couleurs*/ /* ---- Animations load spinner ---- */
+@keyframes spin {
+  0% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(360deg);
+  }
+}
+@keyframes text {
+  0% {
+    opacity: 1;
+    background-position: -500%;
+  }
+  100% {
+    opacity: 1;
+    background-position: 500%;
+  }
+}
+/* ---- Flou page d'accueil ---- */
+@keyframes flou {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 0.1;
+  }
+}
+/* ---- Animation des coeurs ---- */
+@keyframes heart-animation {
+  0% {
+    opacity: 0.2;
+  }
+  40% {
+    opacity: 0.4;
+  }
+  60% {
+    opacity: 0.6;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* ---- Apparition progressive des menus ---- */
+@keyframes animchoice {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 /*General*/
 * {
   box-sizing: border-box;
@@ -21,13 +82,25 @@ h2, h3, p {
 .headerindex, .general {
   animation: flou 9s linear;
 }
+@media screen and (min-width: 992px) {
+  .headerindex, .general {
+    width: 90%;
+    margin: auto;
+  }
+}
 
 /*Loader*/
 .spinload {
-  position: absolute;
+  position: fixed;
   top: 20%;
   left: 25%;
   opacity: 1;
+}
+@media screen and (min-width: 770px) and (max-width: 992px) {
+  .spinload {
+    left: 35%;
+    top: 20%;
+  }
 }
 @media screen and (min-width: 992px) {
   .spinload {
@@ -83,11 +156,11 @@ h2, h3, p {
 .loader__text {
   position: absolute;
   font-size: 40px;
-  background: linear-gradient(90deg, #9356DC, #ff79da, #99e2d0);
+  background: linear-gradient(90deg, #6c27be, #ff2dc5, #5dd1b5);
   background-repeat: no-repeat;
   background-size: 80%;
-  /*-webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(255, 255, 255, 0);*/
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
   animation: text 3s ease-in-out 3;
   font-family: Shrikhand, serif;
   font-weight: bold;
@@ -97,39 +170,7 @@ h2, h3, p {
   left: -20px;
 }
 
-@keyframes spin {
-  0% {
-    opacity: 1;
-    transform: rotate(0deg);
-  }
-  100% {
-    opacity: 1;
-    transform: rotate(360deg);
-  }
-}
-@keyframes text {
-  0% {
-    opacity: 1;
-    background-position: -500%;
-  }
-  100% {
-    opacity: 1;
-    background-position: 500%;
-  }
-}
-@keyframes flou {
-  from {
-    opacity: 0.1;
-  }
-  to {
-    opacity: 0.1;
-  }
-}
-/* header*/
-.headerindex {
-  animation: flou 9s linear;
-}
-
+/* header */
 .header {
   display: flex;
   flex-direction: column;
@@ -161,6 +202,11 @@ h2, h3, p {
   font-size: 19px;
   background-color: #eee;
   box-shadow: inset 0 7px 7px -5px #b3b2b2;
+}
+@media screen and (min-width: 992px) {
+  .header__text {
+    border-radius: 15px 15px 0 0;
+  }
 }
 .header__text p {
   margin-right: 9%;
@@ -236,16 +282,17 @@ h2, h3, p {
 }
 @media screen and (min-width: 770px) and (max-width: 992px) {
   .steps {
-    flex-flow: row wrap;
     width: 95%;
-    margin: auto;
+    margin: 3% auto;
   }
 }
 @media screen and (min-width: 992px) {
   .steps {
     flex-flow: row wrap;
-    width: 95%;
+    width: 100%;
     margin: auto;
+    padding: 5% 0;
+    background-color: #F6F6F6;
   }
 }
 .steps h2 {
@@ -277,7 +324,6 @@ h2, h3, p {
 }
 .steps__btn:hover::after {
   opacity: 1;
-  /*box-shadow: 5px 5px 7px -2px darken(#b3b2b2, 20);*/
 }
 .steps__btn::after {
   content: "";
@@ -297,8 +343,7 @@ h2, h3, p {
   .steps__btn {
     display: flex;
     flex-flow: row nowrap;
-    flex: 1 1 20%;
-    margin: 2%;
+    margin: 2% auto;
   }
 }
 @media screen and (min-width: 992px) {
@@ -481,23 +526,6 @@ h2, h3, p {
   -webkit-text-fill-color: transparent;
   animation: heart-animation 1000ms;
 }
-@keyframes heart-animation {
-  0% {
-    opacity: 0.2;
-  }
-  40% {
-    opacity: 0.4;
-  }
-  60% {
-    opacity: 0.6;
-  }
-  80% {
-    opacity: 0.8;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 
 /*Footer*/
 footer {
@@ -675,6 +703,9 @@ footer {
   opacity: 0;
   animation: animchoice 2000ms ease-in-out forwards;
 }
+.menu .choice:hover .choice__text {
+  flex: 0 1 70%;
+}
 .menu .choice--1 {
   animation-delay: 200ms;
 }
@@ -713,9 +744,9 @@ footer {
   flex: 0 1 75%;
   margin: 10px 15px;
   white-space: nowrap;
-}
-.menu .choice__text:hover {
-  flex: 0 1 60%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .menu .choice:hover .choice__text {
   text-overflow: ellipsis;
@@ -728,7 +759,7 @@ footer {
   margin-right: -20px;
   transform: translateX(0);
   transition: transform 600ms ease-in-out;
-  width: 20px;
+  width: 4%;
 }
 .menu .choice:hover .choice--policetype {
   transform: translateX(-150%);
@@ -740,7 +771,7 @@ footer {
   transition: transform 600ms, 600ms ease-in-out;
   background-color: #99e2d0;
   height: 100%;
-  width: 50px;
+  width: 15%;
   align-items: center;
   justify-content: center;
   display: flex;
@@ -804,21 +835,6 @@ footer {
 @media screen and (min-width: 992px) {
   .menu__btn a {
     font-size: 30px;
-  }
-}
-
-/* Apparition progressive */
-@keyframes animchoice {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
   }
 }
 
