@@ -183,7 +183,7 @@ footer {
   margin: 10%;
   border-radius: 25px;
   background: linear-gradient(#ff79da, #9356DC);
-  color: white;
+  color: #fff;
   border: none;
 }
 @media screen and (min-width: 770px) and (max-width: 992px) {
@@ -198,7 +198,7 @@ footer {
 }
 
 .intro__btn span {
-  color: white;
+  color: #fff;
 }
 
 /* ---- Bouton "Commander" ---- */
@@ -223,7 +223,7 @@ footer {
   align-items: center;
   margin: auto;
   text-decoration: none;
-  color: white;
+  color: #fff;
 }
 @media screen and (min-width: 992px) {
   .menu__btn a {

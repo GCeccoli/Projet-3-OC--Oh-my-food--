@@ -8,7 +8,7 @@
     margin: 10%;
     border-radius: 25px;
     @include back-gradient;
-    color: white;
+    color: $background-btn;
     border: none;
     @include tablettes{
         width: 20%;
@@ -18,11 +18,8 @@
     }
 }
 .intro__btn span{
-    color: white;
+    color: $background-btn;
 }
-
-
-
 
 /* ---- Bouton "Commander" ---- */
 
@@ -44,7 +41,7 @@
     align-items: center;
     margin: auto;
     text-decoration: none;
-    color: white;
+    color: $background-btn;
     @include desktop{
         font-size: 30px;
     }
