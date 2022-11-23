@@ -251,14 +251,24 @@
             left: 80%;
         }
         .fa-heart{
-            &:hover{
-            cursor: pointer;
-            font-weight: 800;
-            background-image: linear-gradient($color-secondary, $color-primary);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: heart-animation 1000ms;
-            }
+            &:active{
+                font-weight: 800;
+                background-image: linear-gradient($color-secondary, $color-primary);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                animation: heart-animation 1000ms;
+                }
+            @include desktop {
+                &:hover{
+                cursor: pointer;
+                font-weight: 800;
+                background-image: linear-gradient($color-secondary, $color-primary);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                animation: heart-animation 1000ms;
+                }
+            }   
         }    
     }    

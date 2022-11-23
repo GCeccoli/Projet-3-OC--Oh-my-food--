@@ -835,14 +835,24 @@ footer {
   top: 80%;
   left: 80%;
 }
-.restos .fa-heart:hover {
-  cursor: pointer;
+.restos .fa-heart:active {
   font-weight: 800;
   background-image: linear-gradient(#ff79da, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: heart-animation 1000ms;
+}
+@media screen and (min-width: 992px) {
+  .restos .fa-heart:hover {
+    cursor: pointer;
+    font-weight: 800;
+    background-image: linear-gradient(#ff79da, #9356DC);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: heart-animation 1000ms;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
