@@ -1,6 +1,6 @@
 /* ---- Animation loader ---- */
 
-.headerindex, .general {
+.headerindex, .general, footer {
     animation: flou 9s linear;
     @include desktop {
         width: 90%;
@@ -68,7 +68,7 @@
         margin: 10px 20px 20px 40px;
         border: none;
         background-color: $background-general;
-        box-shadow: 5px 5px 7px -2px #b3b2b2;
+        box-shadow: 5px 5px 7px -2px $color-shadow;
         z-index: 1;
         &:hover{
             &::after{
@@ -87,7 +87,7 @@
             bottom: 0;
             z-index: -1;
             border-radius: 25px;
-            box-shadow: 5px 5px 7px -2px darken(#b3b2b2, 20);
+            box-shadow: 5px 5px 7px -2px darken($color-shadow, 20);
         }
         @include tablettes {
             display: flex;
@@ -110,7 +110,7 @@
         top: 13px;
         left: -17px;
         padding: 5px;
-        color: white;
+        color: $background-btn;
     }
     .fa-solid{
         position: relative;
@@ -187,10 +187,10 @@
             border-radius: 20px;
             margin: 10px auto;
             position: relative;
-            background-color: white;
+            background-color: $background-btn;
             transition: box-shadow 500ms;
             &:hover{
-                box-shadow: 5px 5px 5px $color-icons;
+                box-shadow: 5px 5px 5px $color-shadow;
             }
 
             @include tablettes{
@@ -204,7 +204,7 @@
         }
         &__link{
             text-decoration: none;
-            color: black;
+            color: $arrow-color;
         }
         &__new{
             position: absolute;

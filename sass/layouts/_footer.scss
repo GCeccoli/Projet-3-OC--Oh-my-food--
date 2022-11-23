@@ -9,14 +9,15 @@
         align-items: center;
     }
     &__title{
-        color: white;
+        color: $background-btn;
         font-family: Shrikhand, serif;
         font-size: 25px;
         padding-left: 35px;
+        font-weight: 500;
     }
     &__link{
         text-decoration: none;
-        color: white;
+        color: $background-btn;
     }
     li{
         list-style: none;
