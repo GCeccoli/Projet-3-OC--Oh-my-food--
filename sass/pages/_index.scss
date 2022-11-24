@@ -1,6 +1,6 @@
 /* ---- Animation loader ---- */
 
-.headerindex, .general, footer {
+.headerindex, .general, footer{
     animation: flou 9s linear;
     @include desktop {
         width: 90%;
@@ -68,7 +68,7 @@
         margin: 10px 20px 20px 40px;
         border: none;
         background-color: $background-general;
-        box-shadow: 5px 5px 7px -2px $color-shadow;
+        @include shadow;
         z-index: 1;
         &:hover{
             &::after{
@@ -87,7 +87,7 @@
             bottom: 0;
             z-index: -1;
             border-radius: 25px;
-            box-shadow: 5px 5px 7px -2px darken($color-shadow, 20);
+            @include shadow;
         }
         @include tablettes {
             display: flex;
@@ -252,6 +252,7 @@
         }
         .fa-heart{
             &:active{
+                cursor: pointer;
                 font-weight: 800;
                 background-image: linear-gradient($color-secondary, $color-primary);
                 background-clip: text;
