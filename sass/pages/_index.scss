@@ -1,6 +1,6 @@
 /* ---- Animation loader ---- */
 
-.headerindex, .general, footer{
+.headerindex, .general, .animfooter{
     animation: flou 9s linear;
     @include desktop {
         width: 90%;
