@@ -94,7 +94,7 @@
   border-radius: 50%;
   border-top-color: #9356DC;
   border-bottom-color: #9356DC;
-  animation: spin 1s ease-in-out 2;
+  animation: spin 1s ease-in-out 3;
   position: absolute;
 }
 .loader__spin:before {
@@ -108,7 +108,7 @@
   border: 5px solid transparent;
   border-top-color: #ff79da;
   border-bottom-color: #ff79da;
-  animation: spin 1s ease-in-out 2;
+  animation: spin 1s ease-in-out 3;
 }
 .loader__spin:after {
   content: "";
@@ -121,7 +121,7 @@
   border: 5px solid transparent;
   border-top-color: #99e2d0;
   border-bottom-color: #99e2d0;
-  animation: spin 1s ease-in-out 2;
+  animation: spin 1s ease-in-out 3;
 }
 
 .loader__text {
@@ -132,7 +132,7 @@
   background-size: 80%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: rgba(255, 255, 255, 0);
-  animation: text 1s ease-in-out 2;
+  animation: text 1s ease-in-out 3;
   font-family: Shrikhand, serif;
   font-weight: bold;
   align-self: center;
@@ -564,7 +564,7 @@ footer {
 
 /* ---- Animation loader ---- */
 .headerindex, .general, .animfooter {
-  animation: flou 2s linear;
+  animation: flou 3s linear;
 }
 @media screen and (min-width: 992px) {
   .headerindex, .general, .animfooter {
