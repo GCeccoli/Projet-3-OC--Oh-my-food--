@@ -1,7 +1,7 @@
 /* ---- Animation loader ---- */
 
 .headerindex, .general, .animfooter{
-    animation: flou 9s linear;
+    animation: flou 2s linear;
     @include desktop {
         width: 90%;
         margin: auto;
