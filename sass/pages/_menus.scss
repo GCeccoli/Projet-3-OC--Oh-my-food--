@@ -2,7 +2,7 @@
 
 .header__arrow{
     text-decoration: none;
-    color: black;
+    color: $arrow-color;
     font-size: 25px;
     position: absolute;
     left: 10%;
@@ -94,7 +94,7 @@
         font-size: 20px;
         margin: 4% 2%;
         &--underline{
-            text-decoration: underline lightgreen 3px;
+            text-decoration: underline $color-tertiary 3px;
             text-underline-offset: 10px;
         }
         @include tablettes{
@@ -107,7 +107,7 @@
         }
     }
     .choice{
-        background-color: white;
+        background-color: $background-btn;
         display: flex;
         flex-flow: row wrap;
         align-items: center;
@@ -170,7 +170,7 @@
             justify-content: center;
             display: flex;
             margin-top: -42px;
-            color: white;
+            color: $background-btn;
         }
         &:hover{
             .choice__check{
@@ -184,7 +184,7 @@
             width: 25px;
             height: 25px;
             border-radius: 100%;
-            background-color: white;
+            background-color: $background-btn;
             font-weight: bold;
             color: $color-tertiary;
             display: flex;

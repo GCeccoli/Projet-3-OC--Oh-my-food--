@@ -17,17 +17,3 @@ h1{
 h2, h3, p{
     font-family: Roboto, sans-serif;
 }
-
-/* ---- Footer ---- */
-
-footer{
-    width: 100%;
-    background-color: #353535;
-    position: relative;
-    top: 100%;
-    @include desktop {
-        width: 90%;
-        margin: 0 auto;
-    }
-}
-
