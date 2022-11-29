@@ -231,6 +231,107 @@ footer {
   }
 }
 
+/* ---- Boutons étapes de fonctionnement ---- */
+.steps__btn {
+  width: 85%;
+  height: 60px;
+  font-family: Roboto, sans-serif;
+  font-size: 17px;
+  border-radius: 25px;
+  position: relative;
+  margin: 10px 20px 20px 40px;
+  border: none;
+  background-color: #F6F6F6;
+  box-shadow: 5px 5px 7px -2px #b3b2b2;
+  z-index: 1;
+}
+.steps__btn:hover::after {
+  opacity: 1;
+}
+.steps__btn::after {
+  content: "";
+  background-color: #e4d5f6;
+  opacity: 0;
+  transition: opacity 300ms;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  border-radius: 25px;
+  box-shadow: 5px 5px 7px -2px #807f7f;
+}
+@media screen and (min-width: 770px) and (max-width: 992px) {
+  .steps__btn {
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 2% auto;
+  }
+}
+@media screen and (min-width: 992px) {
+  .steps__btn {
+    display: flex;
+    flex-flow: row nowrap;
+    flex: 1 1 20%;
+    margin: 2%;
+  }
+}
+
+.steps__num {
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  background: #9356DC;
+  position: absolute;
+  top: 13px;
+  left: -17px;
+  padding: 5px;
+  color: white;
+}
+
+.fa-solid {
+  position: relative;
+  right: 40%;
+  font-size: 20px;
+  color: #7E7E7E;
+  z-index: 1;
+}
+@media screen and (min-width: 770px) and (max-width: 992px) {
+  .fa-solid {
+    left: 9%;
+    top: 30%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .fa-solid {
+    left: 9%;
+    top: 30%;
+  }
+}
+.fa-solid:hover {
+  opacity: 1;
+}
+.fa-solid:hover::after {
+  content: "";
+  color: #9356DC;
+  opacity: 0;
+  transition: opacity 300ms;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.steps__choose {
+  font-weight: 700;
+  position: absolute;
+  left: 23%;
+  top: 35%;
+}
+
 .header {
   display: flex;
   flex-direction: column;
@@ -625,102 +726,6 @@ footer {
   .steps h2 {
     flex: 1 1 100%;
   }
-}
-.steps__btn {
-  width: 85%;
-  height: 60px;
-  font-family: Roboto, sans-serif;
-  font-size: 17px;
-  border-radius: 25px;
-  position: relative;
-  margin: 10px 20px 20px 40px;
-  border: none;
-  background-color: #F6F6F6;
-  box-shadow: 5px 5px 7px -2px #b3b2b2;
-  z-index: 1;
-}
-.steps__btn:hover::after {
-  opacity: 1;
-}
-.steps__btn::after {
-  content: "";
-  background-color: #e4d5f6;
-  opacity: 0;
-  transition: opacity 300ms;
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  z-index: -1;
-  border-radius: 25px;
-  box-shadow: 5px 5px 7px -2px #807f7f;
-}
-@media screen and (min-width: 770px) and (max-width: 992px) {
-  .steps__btn {
-    display: flex;
-    flex-flow: row nowrap;
-    margin: 2% auto;
-  }
-}
-@media screen and (min-width: 992px) {
-  .steps__btn {
-    display: flex;
-    flex-flow: row nowrap;
-    flex: 1 1 20%;
-    margin: 2%;
-  }
-}
-.steps__num {
-  height: 30px;
-  width: 30px;
-  border-radius: 100%;
-  background: #9356DC;
-  position: absolute;
-  top: 13px;
-  left: -17px;
-  padding: 5px;
-  color: white;
-}
-.steps .fa-solid {
-  position: relative;
-  right: 40%;
-  font-size: 20px;
-  color: #7E7E7E;
-  z-index: 1;
-}
-@media screen and (min-width: 770px) and (max-width: 992px) {
-  .steps .fa-solid {
-    left: 9%;
-    top: 30%;
-  }
-}
-@media screen and (min-width: 992px) {
-  .steps .fa-solid {
-    left: 9%;
-    top: 30%;
-  }
-}
-.steps .fa-solid:hover {
-  opacity: 1;
-}
-.steps .fa-solid:hover::after {
-  content: "";
-  color: #9356DC;
-  opacity: 0;
-  transition: opacity 300ms;
-  z-index: -1;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-.steps__choose {
-  font-weight: 700;
-  position: absolute;
-  left: 23%;
-  top: 35%;
 }
 
 /* ---- Carte des restaurants ---- */
