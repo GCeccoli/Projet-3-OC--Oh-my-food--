@@ -65,6 +65,11 @@
     box-shadow: 5px 5px 7px -2px #b3b2b2;
     z-index: 1;
     &:hover {
+        .fa-mobile-screen,
+        .fa-list,
+        .fa-store {
+            color: $color-primary;
+        }
         &::after {
             opacity: 1;
         }

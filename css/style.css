@@ -235,6 +235,11 @@ h2, h3, p {
   box-shadow: 5px 5px 7px -2px #b3b2b2;
   z-index: 1;
 }
+.steps__btn:hover .fa-mobile-screen,
+.steps__btn:hover .fa-list,
+.steps__btn:hover .fa-store {
+  color: #9356DC;
+}
 .steps__btn:hover::after {
   opacity: 1;
 }
@@ -359,6 +364,8 @@ h2, h3, p {
 }
 .header__text i {
   padding-right: 20px;
+  left: 0;
+  top: 0;
 }
 .header__img {
   margin: 20px 0;
@@ -425,17 +432,20 @@ footer {
 
 /* ---- Flèche Header menus ---- */
 .header__arrow {
-  text-decoration: none;
-  color: black;
-  font-size: 25px;
+  font-size: 35px;
   position: absolute;
   left: 10%;
-  top: 35%;
+  top: 20%;
 }
 @media screen and (min-width: 992px) {
   .header__arrow {
     left: 30%;
   }
+}
+
+.fa-arrow-left {
+  color: black;
+  font-size: 23px;
 }
 
 /* ---- Image ---- */
@@ -494,12 +504,30 @@ footer {
 .menu__title--heartsize {
   font-size: 30px;
 }
+.menu__title--heartsize:active {
+  font-weight: 800;
+  background-image: linear-gradient(#ff79da, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: heart-animation 1000ms;
+  cursor: pointer;
+}
 @media screen and (min-width: 992px) {
   .menu__title {
     width: 70%;
   }
   .menu__title--heartsize {
     font-size: 40px;
+  }
+  .menu__title--heartsize:hover {
+    font-weight: 800;
+    background-image: linear-gradient(#ff79da, #9356DC);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: heart-animation 1000ms;
+    cursor: pointer;
   }
 }
 .menu__title h1 {
@@ -599,15 +627,25 @@ footer {
 }
 .menu .choice__title {
   flex: 1 1 100%;
-  margin: 10px 15px;
+  margin: 16px 15px 0;
+}
+@media screen and (min-width: 992px) {
+  .menu .choice__title {
+    margin: 22px 15px 0;
+  }
 }
 .menu .choice__text {
   flex: 0 1 75%;
-  margin: 10px 15px;
+  margin: 0 15px 10px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+@media screen and (min-width: 992px) {
+  .menu .choice__text {
+    margin: 0 15px 20px;
+  }
 }
 .menu .choice:hover .choice__text {
   overflow: hidden;
@@ -621,6 +659,12 @@ footer {
   transform: translateX(0);
   transition: transform 600ms ease-in-out;
   width: 4%;
+  margin-top: -13px;
+}
+@media screen and (min-width: 992px) {
+  .menu .choice--policetype {
+    margin-top: -20px;
+  }
 }
 .menu .choice:hover .choice--policetype {
   transform: translateX(-150%);
@@ -631,13 +675,18 @@ footer {
   opacity: 0;
   transition: transform 600ms, 600ms ease-in-out;
   background-color: #99e2d0;
-  height: 100%;
+  height: 105%;
   width: 15%;
   align-items: center;
   justify-content: center;
   display: flex;
-  margin-top: -42px;
+  margin-top: -40px;
   color: #fff;
+}
+@media screen and (min-width: 992px) {
+  .menu .choice__check {
+    margin-top: -42px;
+  }
 }
 .menu .choice:hover .choice__check {
   transform: translateX(0);
@@ -655,6 +704,25 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: absolute;
+  left: 30%;
+  top: 38%;
+  right: 0;
+  bottom: 0;
+}
+@media screen and (min-width: 770px) and (max-width: 992px) {
+  .menu .choice__check i {
+    top: 38%;
+    left: 35%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .menu .choice__check i {
+    width: 30px;
+    height: 30px;
+    top: 33%;
+    left: 35%;
+  }
 }
 .menu .choice:hover .choice__check i {
   transform: rotate(360deg);
@@ -699,6 +767,7 @@ footer {
 .intro__text h1 {
   font-size: 30px;
   margin-top: 30px;
+  font-family: Roboto, sans-serif;
 }
 .intro__text p {
   font-size: 18px;
