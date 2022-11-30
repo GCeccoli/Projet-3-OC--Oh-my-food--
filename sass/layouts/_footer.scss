@@ -21,7 +21,7 @@ footer{
         align-items: center;
     }
     &__title{
-        color: $background-btn;
+        color: white;
         font-family: Shrikhand, serif;
         font-size: 25px;
         padding-left: 35px;
@@ -29,17 +29,26 @@ footer{
     }
     &__link{
         text-decoration: none;
-        color: $background-btn;
+        color: white;
     }
     li{
         list-style: none;
         line-height: 25px;
+        color: white;
     }
-    .fa-utensils,
+    .fa-utensils{
+        font-size: 14px;
+        width: 25px;
+        height: 20px;
+        color: white;
+        left: 0%
+    }
     .fa-handshake-angle{
         font-size: 14px;
         width: 25px;
         height: 20px;
+        color: white;
+        left: 0%;
     }
 
 }

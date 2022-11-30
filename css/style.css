@@ -393,7 +393,7 @@ footer {
   }
 }
 .contentfooter__title {
-  color: #fff;
+  color: white;
   font-family: Shrikhand, serif;
   font-size: 25px;
   padding-left: 35px;
@@ -401,17 +401,26 @@ footer {
 }
 .contentfooter__link {
   text-decoration: none;
-  color: #fff;
+  color: white;
 }
 .contentfooter li {
   list-style: none;
   line-height: 25px;
+  color: white;
 }
-.contentfooter .fa-utensils,
+.contentfooter .fa-utensils {
+  font-size: 14px;
+  width: 25px;
+  height: 20px;
+  color: white;
+  left: 0%;
+}
 .contentfooter .fa-handshake-angle {
   font-size: 14px;
   width: 25px;
   height: 20px;
+  color: white;
+  left: 0%;
 }
 
 /* ---- Flèche Header menus ---- */
